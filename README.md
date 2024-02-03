@@ -1,0 +1,1 @@
+# Hackintosh for Lenovo Legion R7000P 2020H
