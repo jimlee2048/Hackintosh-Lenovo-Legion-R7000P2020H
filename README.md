@@ -45,8 +45,8 @@
 | Item     | Status                                                       | Notes                                                        |
 | -------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 睡眠     | 🟢 开合盖进入/退出睡眠<br />🟡 睡眠（Sleep）<br />🔴 深度休眠（Hibernate，写入硬盘&断电） | 现用优化措施：<br />- 引入[CpuTscSync](https://github.com/Seey6/CpuTscSync) (修改版，针对AMD移动处理器优化，改善睡死问题)<br />- 升级BIOS版本到FSCN28WW（解决各种奇怪睡眠问题，请自行操作）<br />- 关闭深度休眠（见下文介绍） |
-| 联想fn键 | 🟢 完美支持（状态显示&软件控制）<br />- F1-F4&Home-PgDn 音频控制<br />- F5-F6 屏幕亮度控制<br />- F8 飞行模式<br />- F10 触控板控制<br />🟡 正常可用（可正常触发）<br />- fn+Q 模式切换 （无法软件控制，无触发状态显示）<br />- fn+Space 键盘背光控制（可软件控制，无触发状态显示）<br />- fn+Esc Fn锁（可软件控制，无触发状态显示）<br />🔴 无法使用：其他未列出的fn键 | 控制软件&驱动软件：[YogaSMC](https://github.com/zhen-zen/YogaSMC) |
-| 苹果服务 | 仅列出不可用：<br />🔴 隔空投送<br />🔴 通用控制、随航         | Intel蓝牙网卡的兼容性问题，更换常见的博通白苹果网卡应能解决。 |
+| 联想fn键 | 🟢 完美支持（状态显示&软件控制）<br />- F1-F4&Home-PgDn 音频控制<br />- F5-F6 屏幕亮度控制<br />- F8 飞行模式<br />- F10 触控板控制<br />🟡 正常可用（可正常触发）<br />- fn+Q 模式切换 （无法软件控制，无触发状态显示）<br />- fn+Space 键盘背光控制（可软件控制，无触发状态显示）<br />- fn+Esc Fn锁（可软件控制，无触发状态显示）<br />🔴 无法使用：其他未列出的fn键 | 控制驱动&配套软件：[YogaSMC](https://github.com/zhen-zen/YogaSMC) |
+| 苹果服务 | 仅列出不可用：<br />🔴 隔空投送<br />🔴 接力、通用控制、随航<br />🔴 跨设备同步勿扰状态/屏幕使用时间<br />🔴 部分App：家庭、iMessage、FaceTime | 当前Intel无线网卡驱动的兼容性问题。<br />如需使用，请更换常见的白苹果无线网卡，个人推荐博通BCM943602CS。 |
 
 ## 当前问题
 
@@ -79,7 +79,7 @@
 
 3. 视频硬解不可用
 
-   > 关联[Image & Video hardware decoding/encoding is dysfunctional (github.com)](https://github.com/ChefKissInc/NootedRed/issues/28)
+   > 关联：[Image & Video hardware decoding/encoding is dysfunctional (github.com)](https://github.com/ChefKissInc/NootedRed/issues/28)
 
    - 显卡驱动问题，暂时无解，等待更新修复。
 
@@ -98,6 +98,7 @@
    - 唤醒后等待一会，观察1-2min后是否能重新自动连上，有时能够自动恢复。
    - 如果不行，可尝试手动开关蓝牙。
    - 如果尝试手动开关后，蓝牙仍无法正常工作，则重启系统。
+   - 更换常见白苹果无线网卡后可以有效缓解该问题。
 
 7. 长时间睡眠后，屏幕黑屏无法正常唤醒，且此时系统仍能正常工作（可以听到键盘提示声）
 
