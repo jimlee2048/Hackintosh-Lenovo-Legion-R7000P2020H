@@ -13,7 +13,7 @@
 
 本EFI还可能兼容以下型号，请自行测试可用性：
 
-- Lenovo Legion 5-15ARH05H: Sharing same bios firmware with  R7000P2020H, most likely compatible.
+- Lenovo Legion 5-15ARH05H: Sharing same bios firmware with R7000P2020H, most likely compatible.
 - 联想拯救者R7000（2020款）
 
 ## 可用性
@@ -46,15 +46,15 @@
 | -------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 睡眠     | 🟢 开合盖进入/退出睡眠<br />🟡 睡眠（Sleep）<br />🔴 深度休眠（Hibernate，写入硬盘&断电） | 现用优化措施：<br />- 引入[CpuTscSync](https://github.com/Seey6/CpuTscSync) (修改版，针对AMD移动处理器优化，改善睡死问题)<br />- 升级BIOS版本到FSCN28WW（解决各种奇怪睡眠问题，请自行操作）<br />- 关闭深度休眠（见下文介绍） |
 | 联想fn键 | 🟢 完美支持（状态显示&软件控制）<br />- F1-F4&Home-PgDn 音频控制<br />- F5-F6 屏幕亮度控制<br />- F8 飞行模式<br />- F10 触控板控制<br />🟡 正常可用（可正常触发）<br />- fn+Q 模式切换 （无法软件控制，无触发状态显示）<br />- fn+Space 键盘背光控制（可软件控制，无触发状态显示）<br />- fn+Esc Fn锁（可软件控制，无触发状态显示）<br />🔴 无法使用：其他未列出的fn键 | 控制驱动&配套软件：[YogaSMC](https://github.com/zhen-zen/YogaSMC) |
-| 苹果服务 | 仅列出不可用：<br />🔴 隔空投送<br />🔴 接力、通用控制、随航<br />🔴 跨设备同步勿扰状态/屏幕使用时间<br />🔴 部分App：家庭、iMessage、FaceTime | 当前Intel无线网卡驱动的兼容性问题。<br />如需使用，请更换常见的白苹果无线网卡，个人推荐博通BCM943602CS。 |
+| 苹果服务 | 仅列出不可用：<br />🔴 隔空投送、接力、通用控制<br />🔴 跨设备同步专注状态/屏幕使用时间<br />🔴 部分App：家庭、iMessage、FaceTime<br />🔴 随航 | 当前使用的Intel无线网卡驱动不兼容。<br />更换常见的白苹果无线网卡后可用（随了航除，需要等待显卡驱动修复硬解）<br /> |
 
-## 当前问题
+## 已知问题
 
-1. 打开部分应用会引起花屏。
+1. 打开部分应用会引起花屏/卡死/崩溃。
 
    > 关联：[Advanced OpenGL apps may have artefacts or freeze the system · Issue #158 · ChefKissInc/NootedRed (github.com)](https://github.com/ChefKissInc/NootedRed/issues/158)
 
-   - 存在问题的部分应用：Chrome、Edge、Notion
+   - 存在问题的部分应用：Chrome、Edge、Firefox、Notion
 
    - 问题：显卡驱动[NootedRed](https://github.com/NootInc/NootedRed)和这些应用所使用的新版OpenCL不兼容，有待显卡驱动更新修复。
 
@@ -116,7 +116,6 @@
      sudo pmset -a standby 0
      ```
 
-     
 
 ## 安装指南
 
