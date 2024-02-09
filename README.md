@@ -46,7 +46,7 @@
 | -------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 睡眠     | 🟢 开合盖进入/退出睡眠<br />🟡 睡眠（Sleep）<br />🔴 深度休眠（Hibernate，写入硬盘&断电） | 现用优化措施：<br />- 引入[CpuTscSync](https://github.com/Seey6/CpuTscSync) (修改版，针对AMD移动处理器优化，改善睡死问题)<br />- 升级BIOS版本到FSCN28WW（解决各种奇怪睡眠问题，请自行操作）<br />- 关闭深度休眠（见下文介绍） |
 | 联想fn键 | 🟢 完美支持（状态显示&软件控制）<br />- F1-F4&Home-PgDn 音频控制<br />- F5-F6 屏幕亮度控制<br />- F8 飞行模式<br />- F10 触控板控制<br />🟡 正常可用（可正常触发）<br />- fn+Q 模式切换 （无法软件控制，无触发状态显示）<br />- fn+Space 键盘背光控制（可软件控制，无触发状态显示）<br />- fn+Esc Fn锁（可软件控制，无触发状态显示）<br />🔴 无法使用：其他未列出的fn键 | 控制驱动&配套软件：[YogaSMC](https://github.com/zhen-zen/YogaSMC) |
-| 苹果服务 | 仅列出不可用：<br />🔴 隔空投送、接力、通用控制<br />🔴 跨设备同步专注状态/屏幕使用时间<br />🔴 部分App：家庭、iMessage、FaceTime<br />🔴 随航 | 当前使用的Intel无线网卡驱动不兼容。<br />更换常见的白苹果无线网卡后可用（随了航除，需要等待显卡驱动修复硬解）<br /> |
+| 苹果服务 | 仅列出不可用：<br />🔴 隔空投送、接力、通用控制<br />🔴 跨设备同步专注状态/屏幕使用时间<br />🔴 部分App：家庭、iMessage、FaceTime<br />🔴 随航 | 当前使用的Intel无线网卡驱动不兼容。<br />更换常见的白苹果无线网卡后可用（除了随航，需要等待显卡驱动修复硬解）<br /> |
 
 ## 已知问题
 
@@ -54,7 +54,7 @@
 
    > 关联：[Advanced OpenGL apps may have artefacts or freeze the system · Issue #158 · ChefKissInc/NootedRed (github.com)](https://github.com/ChefKissInc/NootedRed/issues/158)
 
-   - 存在问题的部分应用：Chrome、Edge、Firefox、Notion
+   - 存在问题的部分应用：Chrome、Edge、Notion、Firefox
 
    - 问题：显卡驱动[NootedRed](https://github.com/NootInc/NootedRed)和这些应用所使用的新版OpenCL不兼容，有待显卡驱动更新修复。
 
@@ -71,7 +71,9 @@
        open -a "Microsoft Edge.app" --args --disable-gpu-compositing
        ```
 
-       提示：你可以将该附加了启动参数的命令，使用自动操作（Automator）打包成新的`.app`应用程序。
+       > 提示：你可以将该附加了启动参数的命令，使用自动操作（Automator）打包成新的`.app`应用程序。
+       
+     - 对于 Firefox 浏览器，上述的`BFixup.kext`和启动参数都无效，你可以使用[旧版本Firefox 79.0](https://archive.mozilla.org/pub/firefox/releases/) (感谢 [@yaxirhuxxain](https://github.com/jimlee2048/Hackintosh-Lenovo-Legion-R7000P2020H/issues/1#issuecomment-1935373999))
 
 2. 打开部分应用可能会引起卡顿。
 
