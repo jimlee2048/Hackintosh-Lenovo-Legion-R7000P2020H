@@ -1,5 +1,7 @@
 # Hackintosh for Lenovo Legion R7000P 2020H
 
+[安装指南](./docs/how-to-install.md)
+
 ## 简介
 
 适用于联想拯救者R7000P（2020款）的预配置OpenCore EFI。
@@ -95,20 +97,26 @@
 
    - 解决方案：重启系统。
 
-6. 睡眠唤醒后，蓝牙可能停止工作，无法连接到任何设备。
+6. 无论怎么重启系统，触控版始终无法工作。
+
+   - 你的触控版很可能并非由Synaptic制造，因此不兼容当前默认使用的触控板驱动[VoodooRMI.kext](https://github.com/VoodooSMBus/VoodooRMI)。
+   - 请尝试切换到标准I2C触控版驱动，具体操作如下：编辑OpenCore引导配置（`EFI/OC/config.plist`），在 Kernel > Add 下禁用红框所示驱动，启用蓝框所示驱动。
+     ![image](https://private-user-images.githubusercontent.com/21117946/305714684-c1271daa-7666-49f3-9480-f090e8fd434f.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDg3ODA4NDAsIm5iZiI6MTcwODc4MDU0MCwicGF0aCI6Ii8yMTExNzk0Ni8zMDU3MTQ2ODQtYzEyNzFkYWEtNzY2Ni00OWYzLTk0ODAtZjA5MGU4ZmQ0MzRmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjI0VDEzMTU0MFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTViZjcwM2MwNDFiMzAzZWQ0MzJlMjc0MGI2MjU1OGNjM2IxNDNjM2ZmNDUwZWYyMTJiMDcyYTMyZTFjZWI1OTgmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.R94Sl5jihkOKSFZF2sdb78UVVubHs0CBqoED3Ze3la0)
+
+7. 睡眠唤醒后，蓝牙可能停止工作，无法连接到任何设备。
 
    - 唤醒后等待一会，观察1-2min后是否能重新自动连上，有时能够自动恢复。
    - 如果不行，可尝试手动开关蓝牙。
    - 如果尝试手动开关后，蓝牙仍无法正常工作，则重启系统。
    - 更换常见白苹果无线网卡后可以有效缓解该问题。
 
-7. 长时间睡眠后，屏幕黑屏无法正常唤醒，且此时系统仍能正常工作（可以听到键盘提示声）
+8. 长时间睡眠后，屏幕黑屏无法正常唤醒，且此时系统仍能正常工作（可以听到键盘提示声）
 
    > 关联：[Black screen after a long sleep, but the system works · Issue #213 · ChefKissInc/NootedRed (github.com)](https://github.com/ChefKissInc/NootedRed/issues/213)
 
    - 显卡驱动问题，暂时无解，请强制重启。
 
-8. 深度睡眠（hibernate）不可用，深度睡眠重启后可能黑屏/蓝屏/花屏卡死。
+9. 深度睡眠（hibernate）不可用，深度睡眠重启后可能黑屏/蓝屏/花屏卡死。
 
    - 暂时未能找到修复方法，请关闭深度睡眠模式。
 
@@ -117,16 +125,6 @@
      sudo pmset -a autopoweroff 0
      sudo pmset -a standby 0
      ```
-
-
-## 安装指南
-
-🚧 WIP 施工中
-
-可参考：
-
-- [W2725730722/Lenovo-R7000P-2020-Hackintosh: 联想拯救者 R7000P 2020 黑苹果 (github.com)](https://github.com/W2725730722/Lenovo-R7000P-2020-Hackintosh)
-- [OpenCore安装指南 (sumingyd.github.io)](https://sumingyd.github.io/OpenCore-Install-Guide/)
 
 
 
