@@ -101,7 +101,8 @@
 
    - 你的触控版很可能并非由Synaptic制造，因此不兼容当前默认使用的触控板驱动[VoodooRMI.kext](https://github.com/VoodooSMBus/VoodooRMI)。
    - 请尝试切换到标准I2C触控版驱动，具体操作如下：编辑OpenCore引导配置（`EFI/OC/config.plist`），在 Kernel > Add 下禁用红框所示驱动，启用蓝框所示驱动。
-     ![image](https://private-user-images.githubusercontent.com/21117946/305714684-c1271daa-7666-49f3-9480-f090e8fd434f.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDg3ODA4NDAsIm5iZiI6MTcwODc4MDU0MCwicGF0aCI6Ii8yMTExNzk0Ni8zMDU3MTQ2ODQtYzEyNzFkYWEtNzY2Ni00OWYzLTk0ODAtZjA5MGU4ZmQ0MzRmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjI0VDEzMTU0MFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTViZjcwM2MwNDFiMzAzZWQ0MzJlMjc0MGI2MjU1OGNjM2IxNDNjM2ZmNDUwZWYyMTJiMDcyYTMyZTFjZWI1OTgmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.R94Sl5jihkOKSFZF2sdb78UVVubHs0CBqoED3Ze3la0)
+     ![image](https://github.com/jimlee2048/Hackintosh-Lenovo-Legion-R7000P2020H/assets/21117946/c1271daa-7666-49f3-9480-f090e8fd434f)
+
 
 7. 睡眠唤醒后，蓝牙可能停止工作，无法连接到任何设备。
 
