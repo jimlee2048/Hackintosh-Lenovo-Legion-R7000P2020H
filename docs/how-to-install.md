@@ -104,7 +104,7 @@
 
    - 重启回到Windows或PE，在Win环境下使用[OCAuxiliaryTools (OCAT)](https://github.com/ic005k/OCAuxiliaryTools)修改，完成后覆盖到OC的EFI分区中。
 
-   - 无论是哪种方式，修改完成重启到OpenCore引导时，建议触发一次 `Reset NVRAM`，以避免奇怪的问题。
+   - 无论是哪种方式，修改完成重启到OpenCore引导时，建议触发一次 `Reset NVRAM`，以避免奇怪的问题。对于多系统用户，`Reset NVRAM`后很可能需要重新在BIOS内设置引导项顺序。
 
      ![图源 @wushuo894](./assets/IMG_3916.jpeg)
 
