@@ -3,14 +3,14 @@
 > ⚠️ **阅前注意**
 >
 > - 引导文件仅在 R7000P（2020款）上测试，其他类似型号请自行测试可用性。
-> - 引导文件仅适配 macOS Sonoma，版本号最高适配到14.3.*，**暂不支持最新的14.4.\***
+> - 引导文件仅适配 macOS Sonoma，版本号最高适配到14.4.*
 
 ## 准备工作
 
 1. U盘*1，制作为**macOS系统安装盘**。
    请参考 https://sumingyd.github.io/OpenCore-Install-Guide/installer-guide/windows-install.html
 
-   > ⚠️ 系统镜像版本请选择macOS Sonoma、版本号选择14.3.*，**不要选择最新的14.4.\***
+   > ⚠️ 系统镜像版本请选择macOS Sonoma
 
 2. U盘*1，制作为**UMAF启动盘**，用于后续步骤修改显存用。简要方法如下：
 

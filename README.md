@@ -8,10 +8,10 @@
 
 | Item                 | Info                                                       |
 | -------------------- | ---------------------------------------------------------- |
-| Opencore Version     | 0.9.7                                                      |
-| Model                | 联想拯救者R7000P（2020款）<br />Lenovo Legion R7000P 2020H |
+| Opencore Version     | 0.9.9                                                      |
+| Model                | Lenovo Legion R7000P 2020H<br />联想拯救者R7000P（2020款）    |
 | SMBIOS used          | MacBookPro16,3                                             |
-| Target MacOS Version | macOS Sonoma 14.3                                          |
+| Target MacOS Version | macOS Sonoma 14.4                                          |
 
 本EFI还可能兼容以下型号，请自行测试可用性：
 
