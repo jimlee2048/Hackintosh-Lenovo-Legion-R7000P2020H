@@ -52,11 +52,11 @@
 
 ## 已知问题
 
-1. 打开部分应用会引起花屏/卡死/崩溃。
+1. 打开部分应用时，可能会引起花屏/卡死/崩溃。
 
    > 关联：[Advanced OpenGL apps may have artefacts or freeze the system · Issue #158 · ChefKissInc/NootedRed (github.com)](https://github.com/ChefKissInc/NootedRed/issues/158)
 
-   - 存在问题的部分应用：Chrome、Edge、Notion、Firefox
+   - 存在问题的部分应用：Chrome、Edge、Notion
 
    - 问题：显卡驱动[NootedRed](https://github.com/NootInc/NootedRed)和这些应用所使用的新版OpenCL不兼容，有待显卡驱动更新修复。
 
