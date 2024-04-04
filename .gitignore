@@ -14,12 +14,6 @@ build/
 *.log
 *.tmp
 
-# Ignore compiled binaries
-*.exe
-*.dll
-*.so
-*.dylib
-
 # Ignore package-lock.json for npm
 package-lock.json
 

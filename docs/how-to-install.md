@@ -128,9 +128,15 @@
    sudo pmset -a standby 0
    ```
 
-3. 如果你想禁止在macOS上自动挂载**安装在第1个NVME硬盘位**上的原装SSD：你可以编辑 OC 引导配置，在 ACPI > Add 下启用`SSDT-NVME0-DISABLE.aml`。保存后重启生效。
+3. 禁止在macOS上自动挂载**安装在第1个NVME硬盘位**上的原装SSD：编辑 OC 引导配置，在 ACPI > Add 下启用`SSDT-NVME0-DISABLE.aml`。保存后重启生效。
 
-4. 遇到其他问题？请先看看`README.md`内[已知问题](../README.md#%E5%B7%B2%E7%9F%A5%E9%97%AE%E9%A2%98)部分的介绍。如果仍无法解决，在本仓库维护期内，欢迎留 issue。
+4. 换装了黑苹果网卡后，需要参考以下步骤修改引导配置文件：
+   1. OC配置中，禁用掉截图所示的Intel蓝牙相关`kext`驱动。
+   ![alt text](assets/image-2024040478908375.png)
+   2. 在黑苹果系统已正常可用的情况下，参考[这篇教程](https://github.com/5T33Z0/OC-Little-Translated/blob/main/14_OCLP_Wintel/Enable_Features/WiFi_Sonoma.md)：修改OC引导配置（添加新的`kext`驱动、设置`Kernel/Block`等），并使用 [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/releases) 给系统打补丁。
+
+
+5. 遇到其他问题？请先看看`README.md`内[已知问题](../README.md#%E5%B7%B2%E7%9F%A5%E9%97%AE%E9%A2%98)部分的介绍。如果仍无法解决，在本仓库维护期内，欢迎留 issue。
 
    > ⚠️ 注意：仅积极解答R7000P（2020款）& macOS Sonoma 环境的 issue，其他型号/系统版本只能随缘提供帮助。
 
